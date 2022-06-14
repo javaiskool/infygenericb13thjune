@@ -1,0 +1,173 @@
+2. selection
+skip any statements in normal sequencial execution then selection control structure will be used.
+condition checking constructs
+-------- simple if
+if (condition/s) 
+{
+
+}
+int x=3;
+if (x>0)
+{
+	System.out.println("x is positive");
+}
+
+---------------if else-------------
+
+if (condition/s)
+{
+
+}
+else
+{
+
+}
+
+if (x>0)
+{
+	System.out.println("x is positive");
+}
+else
+{
+	System.out.println("x is not positive");
+}
+
+------ multiple if
+if(condition/s)
+{
+
+}
+if(condition/s)
+{
+
+}
+if(condition/s)
+{
+
+}
+
+if(x>0)
+{ System.out.println("x is positive");}
+if(x<0)
+{ System.out.println("x is negative");}
+else
+{ System.out.println("x is zero");}
+
+--------------------nested if--------------------------
+if(condition/s)
+{
+-----
+-----
+	if(condition/s)
+	{
+
+
+	}
+	else
+	{
+
+	}
+----
+----
+
+}
+else
+{
+---
+---
+	if(condition/s)
+	{
+
+
+	}
+	else
+	{
+
+	}
+----
+----
+}
+
+----- switch case
+
+switch (var)
+{
+ case value1 : ----
+	-----
+	break;
+case value2 : ----
+	-----
+	break;
+
+default ------
+--------
+}
+
+when a case is matched the statements in that case will get executed till break statement is encountered and then execution of switch is stopped.
+if no break statement is encountered in the case than all the statements in folllowing case will get executed till break statement is encountered.
+
+
+iteration
+
+set of statements repeatedly executed till some condition is satisfied.
+
+
+for ( ; ; ) { } => if no. of times the set of statements to be executed is known 
+
+while (condition/s){  } => if no. of iterations not known in advance and depends on condition 
+
+do {  }   while(condoton/s); => similar to while only diff. is the loop statements will surely get executed at least once.
+
+
+------for loop
+
+for(initial value;terminating value/condition; increment/decrement)
+int c=0;
+for(c=0;c<3;c++)
+{
+	System.out.println("hello"+c);
+}
+
+dry run
+c  output
+0  hello
+1  hello
+2  hello
+3
+
+------while loop
+
+int ch =5;
+while(ch>0)
+{
+	System.out.println("welcome");
+	ch=ch-1;
+}
+
+----- do while
+int ch=10;
+do
+{
+	system.out.println("JAVA");
+}
+while(ch<10);
+
+
+---- nested loop
+
+for ()//outer loop
+{
+	---
+	---
+	for() //inner loop
+	{
+		---
+		---
+	}
+	---
+	---
+}
+in nested loop inner loop is re initialized for every iteration of outer loop
+for loops are closely associated with arrays.
+
+any two types of loop can be nested.

@@ -1,0 +1,73 @@
+object oriented programming
+
+reusability
+
+why OOPs?
+-- it closely associates with real life entity
+-- map real life entity into programming constructs
+-- importance is given more to details or data along with functionality.
+
+
+entity		mapped as 	class
+employee, student, member
+item, book
+
+properties mapped as member/instance variables
+employee  - employee number, employee name, city, department, designation, joining date, salary
+
+
+functionalities mapped as methods
+display employee information, calculate salary
+
+
+
+class is template
+{
+	member/instance variables
+	methods
+}
+
+advantage
+
+modularity
+data hiding and data security
+scalability
+
+pillars
+encapsulation
+data abstraction
+polymorphism
+inheritance
+
+----------------
+class   template //user defined datatype
+object existance of class / instance of class
+
+class Emloyee
+{
+	int empNo;  // instance variable
+	String empName;
+	float Salary;
+
+	
+}
+
+return-datatype methodName(parameter list // local variables)
+{
+	variable declaration; // local variables
+	executable statements;
+}
+
+void processMoney(float money){ }
+float processMoney(float money) {     return m;}
+void processMoney() { }
+float processMoney(){   return 100.00;}
+
+	
+classname objectname;
+datatype  variable;
+
+objectname.methodname
+objectname.member-variable-name
+
+in Java primitive datatype parameters are passed by value and objects are passed bby reference.
