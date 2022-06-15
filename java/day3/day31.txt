@@ -1,0 +1,21 @@
+constructor
+special method used to initialize instance variables for each object.
+name of the constructor and class should be same
+no return-datatype specified with constructor
+
+constructor is specified with new keyword for object creation. it will called implicitly.
+there are two types of constructor - parameterless (default), parameterized 
+if you will not write any constructor then java implicitly calls default constructor and initializes all the instance data members with default values of respective data types.
+you can write multiple constructors. this is called as consructor overloading. it works provided the parameter list passed to the constructor differs in no. of parameters or sequence of parameters or datatype of parameters.
+when instance cariables and parameter names in the constructor are same then local variables are considered and instance variables are not initialized in the constructor. this can be resolved by using this keyword to specify instance variables 
+this.instancevarname=localvarname;
+this keyword refers to invoking or calling or current object under consideration.
+alternatively you can use different local variable names.
+
+this keyword can be used only within the scope of the class
+** call constructor - within another constructor for current object only. it should be the first statement in that constructor.
+this(); this(parameter list);
+** refer instance variables for current object in a method or constructor
+this.empNo
+** to call a method within another method for current object.
+this.methodname

@@ -1,0 +1,17 @@
+encapsulation
+** restrict access to sensitive data
+** prevents unauthorized access
+** no direct access to sensitive data outside the class
+** access modifiers
+private - members are directly accessible only within the class. outside the class they can be indirectly accessible through non-private methods of the same class using object.
+public - members are directly accessible within the class and outside the class using object
+default/ pacakge - whenever you do not specify access modifier it is assumed to be defalut or package. the members are accessible within the class directly and other classes within the package using object
+protected - associated with inheritance.
+
+generally instance variables are declared with private access modifier.
+constructors & methods are declared with non-private access modifiers to facilitate accessing private instance variables outside the class.
+
+encapsulation is also called as data hiding. as data in one class can be hidden from another class.
+
+abstraction
+providing only necessary oformation like name, purpose and parameters for a method not disclosing internal working to the user of the class.
