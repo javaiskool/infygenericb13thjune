@@ -1,0 +1,19 @@
+* relationships between classes
+real life scenario we have to handle multiple classes that exists seperately/individually and are related to each other.
+it implements reusability reusability
+
+classes communicate with each other through their objects.
+
+3 types of relationship between the classes
+** agreegation - object reference variable  of one class is member variable of another class
+has a relationship
+
+order - food
+emp - gadget
+student - study_material
+library - books
+dept - emp
+
+
+** association
+** inheritance

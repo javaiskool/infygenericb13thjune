@@ -1,0 +1,77 @@
+static
+
+class design
+{
+instance variables/ non-static variables
+constructors
+methods
+access modifiers
+static variables
+}
+
+static 
+** static variables class variables
+only one copy of static variables is created and maintained and shared by all the onjects
+it is accessible by the class as well as objetcs
+to use static variable there is no need of object
+class loader - at the execution time the class is loaded in internal memory. static variables get memory allocation only once at the time of class loading.
+scope - entire class and objects
+life-time - from class loading till the class exists in the memory.
+there can be multiple static variables in a class
+
+class Emp
+{
+	private static int companyId;  // declaration
+//	private static int companyId=1004; // declaration & initialization
+
+
+static block
+is used to initialize static variables.
+static
+{
+	companyId=1004;
+}
+static block is executed only once at the time of class loading.
+there can be multiple static blocks. they will get executed in the sequence they are written
+
+
+static method
+static methods can access only static properties/variables.
+static methods can not access non-static variables/instance variables.
+non-static methods can acess static variables.
+
+access-modifier static return-datatype methodname(parameter list)
+{
+
+}
+public static int getCompanyId(){return companyId;}
+public static void setCompanyId(int companyId){Emp.companyId=companyId;}
+public void displayEmpInfo() //non-static method
+{
+	S.o.p.(eno);// instance variable or non-static variable
+	S.o.p.(companyId);// static variable or class variable
+
+}
+
+
+class Tester
+{
+
+p.s.v.main(--)
+{
+	S.o.p.(Emp.getCompanyId());
+	Emp.setCompanyId(1005);
+	Emp e1=new emp();
+	S.o.p.(e1.getCompanyId()); // not a good practice
+
+}
+
+
+static keyword can be used for auto-generation of IDs like employee id, item id, student id, account id etc.
+
+
+sequence of execution of static 
+as execution of java program starts with main (which is static and called by JVM), the class in which main method is defined it will get loaded first and static block or other static properties will execute first.
+if an object reference variable is created or it is assigned with null, class will not get loaded.
+when first instance of the class is created or a static method of the class is called then, before that the class is loaded and static block gets executed.
+
