@@ -1,0 +1,24 @@
+polymorphism
+poly - multiple
+morph - forms
+multiple forms of one task
+
+when single task can be performed in different multiple ways then all these methods can be written with same name and different parameter list (no of parameters, sequence of parameters/type of parameters ) 
+
+static polymorphism/ compile-time binding
+constructor overloading
+when multiple constructors are written in a class it is example of polymorphiam, because all the constructors will have same name and different parameter list. moreover they are used to perform single task of instance-variable initialization in different ways.
+this is called as constructor overloading.
+
+method overloading
+when single task that can be done in different ways is represented with same methodname and different parameter list then it is called as method overloading
+e.g. you have drawn an object say circle. now you want to paint it.
+paint is the task
+way1 - paint with specific colour like blue
+	public void paint(String colour) /
+way2 - paint with RGB combination
+	public void paint(int r, int g,int b)
+way3 - paint with colour code
+	public void paint(String code,int dummy)
+
+method overloading is not allowed or recognized by difference in return data type.

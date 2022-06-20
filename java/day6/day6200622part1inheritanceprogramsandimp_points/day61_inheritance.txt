@@ -1,0 +1,72 @@
+Association
+in association the classes communicate through methods. i.e. for functionality of one class it can use object of another class
+
+uses a relationship
+
+emp has gadget          aggregation
+salary uses employee    association
+
+order has food  aggregation
+bill uses order association
+
+
+inheritance
+using properties of one class in design of another class
+designing new class with the help of / based on existing class
+
+is a type of  relationship
+
+employee - programmer
+
+new class programmer will reuse existing class employee
+employee - super class  / employee class is inherited by programmer class
+programmer - sub class  / programmer class is inheriting employee class
+
+class Employee
+{
+
+}
+class programmer extends Employee
+{
+
+
+}
+
+concrete class - a class that has properties (class variables and instance variables)  and functionalities defined (methods defined )is called as concrete class e.g. Employee 
+a class can inherit only one concrete class at a time
+
+when object of subclass is created then first default constructor of super class is implicitly invoked to initialize all the instance variables of the super class. then the specific constrauctor of subclass is implicitly invoked to initialize the instance variables of its own.
+to invoke parameterized constructor of superclass from constructor os subclass super keyword is used.
+super(parameters);
+it should be the first statement in the subclass constructor.
+
+employee class will be reused by programmer class
+the non-private properties are accessible to inherited (subclass) class , as if those are its own properties
+
+super class cannot access properties of subclass.
+i.e. object of superclass cannot access members of subclass 
+
+
+generally functionality of super class is used through object of derive class. 
+generally object of superclass is not used frequently.
+
+types of inheritance
+single 
+one superclass one subclass
+A-B
+Employee (empNo,empName,salary) - Programmer (skill)
+
+hierarchical 
+one superclass and 2 or more subclasses
+A-B A-C  => A-B,C
+Employee (empNo,empName,salary) - Programmer (skill), Technician(software)
+
+multilevel inheritance
+one superclass one subclass => subclass as superclass one subclass
+A-B-C
+Employee (empNo,empName,salary) - Programmer (skill) - TeamHead (teamName)
+
+multiple inheritance
+A,B- C  not supported in Java for concrete classes
+
+
