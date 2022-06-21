@@ -1,0 +1,30 @@
+int x=4,y=4;
+if (x==y) => true
+
+
+A a1=new A();  => memory address 200
+A a2=new A(); => memory address 400
+A a3=a2;      => memory address 400
+
+//== compares memory address
+if (a1==a2) => false
+if (a2==a3) => true
+
+//equals compares memory address for user defined classes unless equals method is overridden
+if(a1.equals(a2)) => false
+if(a2.equals(a3)) => true
+
+String s1=new String("hello");  =>memory address 180
+String s2=new String("welcome"); => memory address 30
+String s3=new String("hello"); => memory address 60
+String s4=s2;                  => memory address 30
+
+//== compares memory address
+if(s1==s2)  => false
+if(s2==s3) => false
+if (s2==s4) => true
+
+//overriden to compare contents
+if(s1.equals(s2)) => flase
+if(s1.equals(s3)) => true
+if(s2.equals(s4)) => true

@@ -1,0 +1,10 @@
+final keyword 
+3 ways to use it in classes
+final with variable => the value once assigned to the variable cannot be changed.
+
+final with method => if a method is declared as final in superclass then it cannot be overridden in the child class
+
+final with class => if a class is declared as final then it cannot be inherited.
+
+
+
