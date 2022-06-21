@@ -1,0 +1,38 @@
+polymorphism
+
+dynamic polymorphism / run-time binding/ late binding
+it links objects and methods calls at execution time
+
+implemented with method overriding
+
+works with inheritance, where superclass and subclass have exactly same signature of a particular method.
+this facilitates to change or provide new implementation to the superclass method in the child class
+
+class A
+{
+
+public void dispMsg(){---}  //overridden method
+
+
+}
+class B : extends A
+{
+
+
+public void dispMsg(){---} //overridden method
+
+
+}
+e.g. dispMsg in class A is used to display messages like good morning, good evening
+the child class B want to give new implementation to the method in the superclass. it wants to display messages like happy new year, happy birthday.
+this can be achieved by overriding the method. i.e. writing exactly same signature of the supercalss  method  in the subclass.
+
+overridden methods have exactly same signature i.e. the return data-type, methodname and parameter list ( no. of parameters & datatype of parameters and sequence of parameters) should exacly match.
+the access modifier can be wider but not weaker or narrower in the subclass.
+
+static methods are not overridden
+generally in inheritance functionality of superclass is managed with instance of subclass.
+
+
+generic method
+the superclass object can handle its own instance as well as instance of any of its subclass
