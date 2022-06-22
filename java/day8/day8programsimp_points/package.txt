@@ -1,0 +1,49 @@
+package
+
+to group related classes and interfaces 
+to create package syntax is 
+package packagename;
+package pkg1;
+
+it should be the first statement in the source file
+classes can have public or default access modifier
+
+to use classes across other package 
+either import entire package
+import pkg1.*;
+
+or import particular class in a package
+import pkg1.B;
+
+or access the properties with full name
+pkg1.B b1=new pkg1.B();
+ 
+
+public properties are accessible to all the classes in same package and other package
+
+protected properties are accessible to all classes in same package and subclasses in other package
+
+default properties are accessible to all the classes in same package only.
+
+private properties are accessible only within the class
+
+to compile and create packages and use classes across the packages
+
+d:\java_prg_june has files 
+
+pkg1 - B.java, Tester1.java
+pkg2 - Tester2.java
+
+create pkg1 and compile files in the package pkg1
+d:\java_prg_june>javac -d . B.java
+d:\java_prg_june>javac -d . Tester1.java
+
+create pkg2 and compile file in the package pkg2
+d:\java_prg_june>java -d . Tester2.java
+
+to execute programs
+d:\java_prg_june>java pkg1.Tester1
+d:\java_prg_june>java pkg2.Tester2
+
+
+ 

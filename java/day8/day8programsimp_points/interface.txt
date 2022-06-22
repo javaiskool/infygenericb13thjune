@@ -1,0 +1,30 @@
+interface
+complete designer class
+all the methods in an interface are abstract methods.
+all the variable in an interface are public, static, final
+multiple inheritance is supported only in case of interfaces in Java
+interface cannot be instranciated. its design is to be used through inheritance.
+this is to implement the design provided by an interface while designing classes.
+for inheriting interface the keyword used is implements
+the child class has to provide definition of all the methods from the interface, else the child class becomes abstract
+
+interface interfacename
+{
+
+method signature declaration;
+constant declaration
+
+}
+
+class classname implements interfacename
+{
+
+definitions for all methods in interface
+
+}
+
+
+inheritance
+interface to interface => extends
+class to class => extends
+interface to class => implements

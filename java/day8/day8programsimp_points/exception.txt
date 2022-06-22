@@ -1,0 +1,52 @@
+exception handling
+
+
+errors
+syntax errors => related to syntax, rules => compilation
+logical errors => programming logic => testing
+system errors  => memory or system related => cannot be handled
+
+
+unexpected problems faced at execution time due to user interaction, resouce/data handling
+the program terminates.
+for these problems mechanism can be provided to handle them  at least communicate about them to the user 
+skip it and contunie execution further
+correction can be provided.
+
+exception handling
+
+try
+catch()
+finally
+throw
+throws
+
+try
+a set of statements can be enclosed in a try block.
+if no statements throws an exception then the normal execution will continue.
+if any of the statements in try block throws an exception then no statement in try block is executed after that statement.the exception will be thrown out of try block and matching catch block will get executed. after catch block the program execution will continue.
+
+catch
+a try block should be immediately followed by a catch block. a try block may have multiple catch blocks. a matching catch block is executed if available. otherwise the program will throw the exception and terminate.
+if a catch block with Exception object is provided then it should be the last catch block otherwise compilation error will be generated.
+
+finally
+a try-catch block may be followed by finally block. in all situations the statements written in the finally block are executed. i.e.  no exection is thrown, exception is thrown and handled with matching catch or exception is not caught, in all these cases finally block will get executed.
+
+throw
+to handle user specified exceptional situation an instance of appropriate exception class can be created and thrown out of try block.
+throw new Exception("message");
+
+types of exceptions in Java
+unchecked - runtime exceptions which are not checked  at compile time.
+e.g. ArithmeticException, NumberFormatException, NullPointerException
+
+checked - exceptions other than runtime which are checked at compile time.ie it is mandatory to hanle exception while using input/output or database resources. it will be checked at compile time.
+e.g. IOException SQLException
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+abstract keyword
+
+it is to provide only design i.e. only method signature declaration and not definition in a class.
+the method prefixed with abstract keyword is written as
+access modifier abstract return-datatype methodname(parameter list);
+when a method is declared as abstract the class also becomes abstract and it is to be prefixed with abstract keyword.
+abstract class may have zero or more abstract methods. it can have concrete methods.
+abstract class cannot be instanciated. 
+its functionalities are to be used through inheritance. 
+if an abstract class has abstract method then the child class has to provide the definition of the abstract methods (override the abstract methods) , else the child class also becomes abstract.

@@ -1,0 +1,17 @@
+Object is implicit superclass os all the classes i.e. inbuilt class as well as user defined classes
+
+toString() => to provide text representation of the object
+S.o.p. (object); => by default displayes classname@code
+it can be overridden to display meaningful and useful info. about class
+
+
+comparing objects
+==   compares memory address
+equals() by default compares memory address
+in built in classes like String, Integer (wrapper classes) it is overriden to compare contents 
+it can be overridden in UDD (class)
+
+hashCode() compare on the basis of the hashcode generated for each object.
+it can be overridden in UDD (class)
+it is faster 
+
