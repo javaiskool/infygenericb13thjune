@@ -1,0 +1,37 @@
+create table category(cid varchar2(10) primary key,cname varchar2(20))
+
+create table item(ino integer primary key, iname varchar2(30),cid varchar2(10) references category(cid),qty integer,price number(8,2))
+
+insert into category values ('C001','Stationary');
+insert into category values ('C002','Cutlery');
+insert into category values ('C003','Clothing');
+insert into category values ('C004','Toys');
+
+insert into item values (1,'Pen','C001',50,2.50);
+insert into item values (2,'Pencil','C001',100,1);
+insert into item values (3,'Stencil','C001',100,50);
+insert into item values (4,'Knife','C002',10,250);
+insert into item values (5,'Spoon','C002',500,15);
+insert into item values (6,'Fork','C002',500,18);
+insert into item values (7,'Saree','C003',10,2600);
+insert into item values (8,'Tshirt','C003',100,900);
+insert into item values (9,'Trousers','C003',100,1200);
+
+display item number,item name, average amount(qty*price) => 
+select ino,iname,(select avg(qty*price) from item) avg_amount from item
+
+select * from (select ino,iname,qty from item) i
+
+select cid,cname from category where cid in (select cid from item)
+
+**when display includes columns from more then one table then the solution is not obtained using subquery , but it is obtained used join
+select ino,iname,cid,(select cname from cATEGORY) C FROM ITEM => will not work
+select ino,iname,category.cid, cname  FROM ITEM inner join category on item.cid=category.cid => will work
+
+display item number,item name an dprice of highest priced item 
+select ino,iname,price from item where price=(select max(price) from item where price<(select max(price) from item))
+
+correlated subquery
+select ino,iname, PRICE FROM ITEM a  WHERE PRICE=(SELECT MAX(PRICE) FROM ITEM b where a.cid=b.cid)
+
+

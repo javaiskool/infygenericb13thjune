@@ -1,0 +1,73 @@
+create table dept (dno number,dname varchar2(10))
+create table emp(eno number,ename varchar2(10),sal number(12,2),dno number)
+insert into dept values (101,'ACC')
+insert into dept values (102,'MKT')
+insert into dept values (103,'IT')
+insert into dept values (104,'PRD')
+insert into dept values (105,'PUR')
+
+insert into emp values (1,'AAA',20000,101)
+insert into emp values (2,'BBB',56000,102)
+insert into emp values (3,'SSS',43000,102)
+insert into emp values (4,'DDD',77000,103)
+insert into emp values (5,'CCC',28000,103)
+insert into emp values (6,'FFF',67000,101)
+insert into emp values (7,'GGG',89000,101)
+insert into emp values (8,'KKK',93000,NULL)
+
+**cross join
+SELECT * FROM EMP CROSS JOIN DEPT
+SELECT * FROM EMP ,DEPT
+SELECT DNO,DNAME,ENO,ENAME FROM EMP,DEPT
+SELECT DNO,DNAME,ENO,ENAME FROM EMP cross join DEPT
+
+**inner join
+
+select dname,eno,ename from emp, dept where emp.dno=dept.dno
+select dept.dno,dname,eno,ename from emp, dept where emp.dno=dept.dno
+select d.dno,dname,eno,ename from emp e, dept  d where e.dno=d.dno
+select d.dno,dname,eno,ename from emp e, dept  d where e.dno=d.dno where sal>30000
+
+
+select d.dno,dname,eno,ename from emp e inner join dept  d on e.dno=d.dno
+
+select d.dno,dname,eno,ename from emp e inner join dept  d on e.dno=d.dno where sal>30000
+select d.dno,dname,eno,ename from emp e inner join dept  d on e.dno=d.dno and sal>30000
+
+
+****************** 
+self join
+one table is considered twice and the matching tuples from both will be fetched based on join condition
+using alias name for both the tables is compalsary
+all the columns should be prefixed with alias_name. 
+be careful while giving the column headings and join condition
+e.g.
+emp-manager  (eno,ename,sal,dno,mgr)
+		1 AAA 101 NULL    
+		2 NNN 101 1
+		3 MMM 101 1
+		4 AAA 101 1
+
+		1 AAA 101 NULL    
+		2 NNN 101 1
+		3 MMM 101 1
+		4 AAA 101 1
+
+ENAME MGRNAME
+
+NNN	AAA
+MMM	AAA
+AAA	AAA
+
+
+student-event_head (rollno, sname,eventid,ehead)
+
+
+alter table emp add (mgr number)
+update emp set mgr=4 where dno=103
+
+select m.ename "employee name",e.ename "manager name" from emp e inner join emp m on e.eno=m.mgr
+
+
+{A,B,C} {1,2,3,4}
+{A1,B1,C1,A2,B2,C2,A3,B3,C3,A4,B4,C4}
